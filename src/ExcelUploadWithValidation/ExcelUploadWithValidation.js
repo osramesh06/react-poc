@@ -38,7 +38,7 @@ const ExcelUploadWithValidation = () => {
         if (res.length > 0) {
           let headingsColumn = res[0];
           let missedColumn = [];
-          for (let [key, value] of Object.entries(schema)) {
+          for (let [key] of Object.entries(schema)) {
             if (headingsColumn.includes(key) === false) {
               missedColumn.push(key);
             }
